@@ -1,0 +1,87 @@
+[
+  {
+    
+    "name": "MacBook Pro 14”",
+    "description": "Apple M2 Pro chip, 16GB RAM, 512GB SSD - perfect for professionals.",
+    "price_usd": 2200,
+    "price_bdt": 264000,
+    "image": "https://i.ibb.co/ZzTb2GSB/photo-1658400274389-e7dbedd89b67.jpg"
+  },
+  {
+   
+    "name": "iPhone 15",
+    "description": "Latest iPhone with A17 Bionic chip and stunning camera system.",
+    "price_usd": 1200,
+    "price_bdt": 144000,
+    "image": "https://i.ibb.co/yFVQjjFD/photo-1695048132832-b41495f12eb4.jpg"
+  },
+  {
+   
+    "name": "Sony WH-1000XM5",
+    "description": "Noise-cancelling over-ear wireless headphones with premium sound.",
+    "price_usd": 350,
+    "price_bdt": 42000,
+    "image": "https://i.ibb.co/1YLkZ2x9/photo-1755719401938-35c1b24f6d15.jpg"
+  },
+  {
+   
+    "name": "Samsung Galaxy Watch 6",
+    "description": "Smartwatch with AMOLED display and advanced health tracking.",
+    "price_usd": 300,
+    "price_bdt": 36000,
+    "image": "https://i.ibb.co/hR4JvpQq/premium-photo-1710714000385-18ecebfd5d4c.jpg"
+  },
+  {
+  
+    "name": "iPad Air",
+    "description": "10.9-inch Liquid Retina display, A15 Bionic chip, ultra-lightweight.",
+    "price_usd": 600,
+    "price_bdt": 72000,
+    "image": "https://i.ibb.co/7NzV8GXV/photo-1648806030599-c963fd14a22f.jpg"
+  },
+  {
+  
+    
+    "name": "Dell XPS 13",
+    "description": "Compact ultrabook with Intel i7, 16GB RAM, and 1TB SSD.",
+    "price_usd": 1800,
+    "price_bdt": 216000,
+    "image": "https://i.ibb.co/yBf8XzF1/photo-1493661969828-411ef6a6624d.jpg"
+  },
+  {
+   
+    
+    "name": "Apple AirPods Pro 2",
+    "description": "Wireless earbuds with active noise cancellation and spatial audio.",
+    "price_usd": 250,
+    "price_bdt": 30000,
+    "image": "https://i.ibb.co/pYybfFX/photo-1593442607435-e4e34991b210.jpg"
+  },
+  {
+   
+    
+    "name": "Logitech MX Master 3",
+    "description": "Ergonomic wireless mouse with precision tracking.",
+    "price_usd": 120,
+    "price_bdt": 14400,
+    "image": "https://i.ibb.co/k6HQ8HKZ/photo-1722682810969-06dfc9c9d517.jpg"
+  },
+  {
+   
+    
+    "name": "Samsung 4K Monitor",
+    "description": "27-inch UHD monitor with HDR10 and ultra-thin bezels.",
+    "price_usd": 400,
+    "price_bdt": 48000,
+    "image": "https://i.ibb.co/ZpvV9Rk8/photo-1725003653601-8b131b0e93b6.jpg"
+  },
+  {
+   
+    
+    "name": "GoPro HERO11",
+    "description": "Action camera with 5.3K video recording and advanced stabilization.",
+    "price_usd": 500,
+    "price_bdt": 60000,
+    "image": "https://i.ibb.co/M52vR8FR/photo-1684772235052-9516b11168ae.jpg"
+  }
+]
