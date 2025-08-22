@@ -24,7 +24,7 @@ export const authOptions = {
   pages: { signIn: "/login" },
   callbacks: {
     async redirect({ url, baseUrl }) {
-      return "/products";
+      return "/dashboard/add-product";
     },
   },
   session: { strategy: "jwt" },
