@@ -33,7 +33,7 @@ export default function LoginPage() {
           onChange={(e) => setPassword(e.target.value)}
           className="border p-2"
         />
-        <button type="submit" className="bg-blue-500 text-white px-4 py-2">
+        <button type="submit" className="bg-[#154D71] text-white px-4 py-2">
           Login
         </button>
       </form>
