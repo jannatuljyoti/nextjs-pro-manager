@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Next.js Pro Manager
 
-First, run the development server:
+## Project Description
+
+Next.js Pro Manager is a full-stack product management application built with Next.js and MongoDB.  
+It allows users to view, add, and manage products through an intuitive interface.  
+The app also uses NextAuth for authentication and role-based access control.
+
+---
+
+## Setup & Installation Instructions
+
+### 1. Clone the repository
 
 ```bash
+git clone https://github.com/jannatuljyoti/nextjs-pro-manager.git
+cd nextjs-pro-manager
+
+2. Install dependencies
+npm install
+
+3.Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Build for production
+npm run build
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+###Route Summary
 
-## Learn More
+##Public Routes:
 
-To learn more about Next.js, take a look at the following resources:
+/ → GET → Home / Landing Page
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+/products → GET → View all products
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+##Protected Routes (Require Auth):
 
-## Deploy on Vercel
+/admin/products/add → POST → Add a new product
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+/admin/products → GET → Manage all products
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+/api/products → GET / POST → API route to fetch/add products
+
+
+
+##Tech Stack
+
+Frontend: Next.js, React, Tailwind CSS
+
+Backend: Node.js, API Routes
+
+Database: MongoDB
+
+Authentication: NextAuth.js
+
+Deployment: Vercel
+
