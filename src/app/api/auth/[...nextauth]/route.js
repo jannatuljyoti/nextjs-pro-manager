@@ -1,14 +1,6 @@
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 
-// Fixed demo user
-const demoUser = {
-  id: 1,
-  name: "John Doe",
-  email: "user@example.com",
-  password: "123456",
-};
-
 export const authOptions = {
   providers: [
     CredentialsProvider({
@@ -18,14 +10,11 @@ export const authOptions = {
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
-        if (
-          credentials?.email === demoUser.email &&
-          credentials?.password === demoUser.password
-        ) {
+        if (credentials?.email && credentials?.password) {
           return {
-            id: demoUser.id,
-            name: demoUser.name,
-            email: demoUser.email,
+            id: Date.now(),
+            name: credentials.email.split("@")[0],
+            email: credentials.email,
           };
         }
         return null;
@@ -39,7 +28,7 @@ export const authOptions = {
     },
   },
   session: { strategy: "jwt" },
-  secret: process.env.NEXTAUTH_SECRET, // Must add in .env.local
+  secret: process.env.NEXTAUTH_SECRET,
 };
 
 const handler = NextAuth(authOptions);
