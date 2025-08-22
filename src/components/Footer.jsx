@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="footer footer-horizontal footer-center bg-[#154D71] text-primary-content p-10">
   <aside>
     
-        <Image className='rounded-full' src={'/assets/logo.jpg'} width={48} height={40}/> 
+        <Image className='rounded-full' src={'/assets/logo.jpg'} width={48} height={40} alt='icon'/> 
         
     
     <p className="font-bold">

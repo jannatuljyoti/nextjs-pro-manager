@@ -1,5 +1,6 @@
 
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 export default async function ProductsHighLight() {
@@ -59,35 +60,45 @@ export default async function ProductsHighLight() {
 
     // const data = await res.json();
   return (
-    <div className="grid grid-cols-12 gap-6 px-4 py-8">
-      {data.map((item) => (
-        <div
-          key={item._id}
-          className="col-span-12 sm:col-span-6 lg:col-span-4 bg-white shadow-md rounded-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300"
-        >
-          <div className="relative w-full h-52">
-            <Image
-              src={item.image}
-              alt={item.name}
-              fill
-              className="object-cover"
-            />
-          </div>
-          <div className="p-4">
-            <h2 className="text-lg font-semibold mb-1">{item.name}</h2>
-            <p className="text-sm text-gray-600 mb-3 line-clamp-2">
-              {item.description}
-            </p>
-            <div className="flex justify-between items-center">
-              
-              
-              <span className="text-blue-600 font-bold">
-                {item.price_bdt.toLocaleString()} ৳
-              </span>
+     <div className="px-4 py-8">
+      {/* Grid of products */}
+      <div className="grid grid-cols-12 gap-6">
+        {data.map((item) => (
+          <div
+            key={item.id}
+            className="col-span-12 sm:col-span-6 lg:col-span-4 bg-white shadow-md rounded-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300"
+          >
+            <div className="relative w-full h-52">
+              <Image
+                src={item.image}
+                alt={item.name}
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="p-4">
+              <h2 className="text-lg font-semibold mb-1">{item.name}</h2>
+              <p className="text-sm text-gray-600 mb-3 line-clamp-2">
+                {item.description}
+              </p>
+              <div className="flex justify-between items-center">
+                <span className="text-blue-600 font-bold">
+                  {item.price_bdt.toLocaleString()} ৳
+                </span>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
+
+      {/* See More Button */}
+      <div className="flex justify-center mt-8">
+        <Link href="/products">
+          <button className="px-6 py-3 bg-[#154D71] text-white rounded-lg hover:bg-[#1C6EA4] transition">
+            See More Products →
+          </button>
+        </Link>
+      </div>
     </div>
   )
 }

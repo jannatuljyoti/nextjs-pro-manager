@@ -1,6 +1,8 @@
+"use client"
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import LogInButon from './LogInButon'
 
 export default function Navbar() {
 
@@ -28,7 +30,7 @@ export default function Navbar() {
       </ul>
     </div>
     <Link href={"/"} className=" pb-2 gap-2 text-xl flex">
-        <Image className='rounded-full' src={'/assets/logo.jpg'} width={48} height={40}/> 
+        <Image className='rounded-full' src={'/assets/logo.jpg'} width={48} height={40} alt='icon'/> 
         <p className='pt-4 font-bold'>Pro<span className='text-[#154D71]'>Manager</span></p>
     </Link>
   </div>
@@ -42,7 +44,8 @@ export default function Navbar() {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn btn-outline">LogIn</a>
+    <Link href="/login" className="btn bg-[#154D71] text-white">LogIn</Link>
+     
   </div>
 </div>
   )
