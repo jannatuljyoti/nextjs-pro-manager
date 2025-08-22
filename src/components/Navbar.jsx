@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import LogInButon from './LogInButon'
+
 
 export default function Navbar() {
 
@@ -12,6 +12,13 @@ export default function Navbar() {
             <li><Link className='font-semibold ' href={"/"}>Home</Link></li>
        
             <li><Link className='font-semibold' href={"/products"}>Products</Link></li>
+            
+            <li>
+  <Link className="font-semibold" href={"/dashboard/add-product"}>
+    Dashboard
+  </Link>
+</li>
+
             
             </>
         )
@@ -30,7 +37,14 @@ export default function Navbar() {
       </ul>
     </div>
     <Link href={"/"} className=" pb-2 gap-2 text-xl flex">
-        <Image className='rounded-full' src={'/assets/logo.jpg'} width={48} height={40} alt='icon'/> 
+        <Image 
+  src="/assets/logo.jpg"
+  alt="Logo"
+  width={40}
+  height={60}
+  className="object-contain"
+/>
+
         <p className='pt-4 font-bold'>Pro<span className='text-[#154D71]'>Manager</span></p>
     </Link>
   </div>

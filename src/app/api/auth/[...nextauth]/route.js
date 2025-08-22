@@ -1,5 +1,13 @@
-import NextAuth from "next-auth"
-import CredentialsProvider from "next-auth/providers/credentials"
+import NextAuth from "next-auth";
+import CredentialsProvider from "next-auth/providers/credentials";
+
+// Fixed demo user
+const demoUser = {
+  id: 1,
+  name: "John Doe",
+  email: "user@example.com",
+  password: "123456",
+};
 
 export const authOptions = {
   providers: [
@@ -7,29 +15,32 @@ export const authOptions = {
       name: "Credentials",
       credentials: {
         email: { label: "Email", type: "text" },
-        password: { label: "Password", type: "password" }
+        password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
-        // এখানে তোমার user validation logic
-        // উদাহরণ: একজাম্পল user
         if (
-          credentials.email === "user@example.com" &&
-          credentials.password === "123456"
+          credentials?.email === demoUser.email &&
+          credentials?.password === demoUser.password
         ) {
-          return { id: 1, name: "John Doe", email: "user@example.com" }
+          return {
+            id: demoUser.id,
+            name: demoUser.name,
+            email: demoUser.email,
+          };
         }
-        return null
-      }
-    })
+        return null;
+      },
+    }),
   ],
   pages: { signIn: "/login" },
   callbacks: {
     async redirect({ url, baseUrl }) {
-      return "/products" // Successful login → /products
-    }
+      return "/products";
+    },
   },
-  session: { strategy: "jwt" }
-}
+  session: { strategy: "jwt" },
+  secret: process.env.NEXTAUTH_SECRET, // Must add in .env.local
+};
 
-const handler = NextAuth(authOptions)
-export { handler as GET, handler as POST }
+const handler = NextAuth(authOptions);
+export { handler as GET, handler as POST };
